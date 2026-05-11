@@ -1,1 +1,993 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DVSA Driving Test Day — Nerves & Composure Checklist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --ink: #1a2b3c;
+    --slate: #2d4059;
+    --steel: #4a6580;
+    --fog: #8ea7be;
+    --mist: #c9d9e8;
+    --paper: #f5f0e8;
+    --cream: #faf7f2;
+    --gold: #c9a84c;
+    --amber: #e8b94a;
+    --sage: #4a7c5f;
+    --leaf: #5d9974;
+    --rust: #b85c38;
+    --blush: #e07b5a;
+    --divider: #ddd6c8;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background: var(–cream);
+color: var(–ink);
+font-family: ‘Source Sans 3’, Georgia, serif;
+font-size: 16px;
+line-height: 1.7;
+}
+
+/* ── COVER ── */
+.cover {
+background: var(–navy);
+color: var(–paper);
+padding: 70px 48px 60px;
+position: relative;
+overflow: hidden;
+}
+.cover::before {
+content: ‘’;
+position: absolute;
+top: -80px; right: -80px;
+width: 400px; height: 400px;
+border-radius: 50%;
+border: 60px solid rgba(201,168,76,.12);
+}
+.cover::after {
+content: ‘’;
+position: absolute;
+bottom: -60px; left: 60px;
+width: 250px; height: 250px;
+border-radius: 50%;
+border: 40px solid rgba(201,168,76,.08);
+}
+.cover-inner {
+max-width: 860px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+.cover-badge {
+display: inline-block;
+border: 1.5px solid var(–gold);
+color: var(–gold);
+font-size: 10px;
+font-weight: 600;
+letter-spacing: 2.5px;
+text-transform: uppercase;
+padding: 5px 12px;
+margin-bottom: 28px;
+}
+.cover h1 {
+font-family: ‘Playfair Display’, Georgia, serif;
+font-size: clamp(2rem, 5vw, 3.4rem);
+font-weight: 900;
+line-height: 1.1;
+max-width: 640px;
+margin-bottom: 20px;
+}
+.cover h1 span { color: var(–amber); }
+.cover .subtitle {
+font-size: 1rem;
+font-weight: 300;
+color: var(–mist);
+max-width: 520px;
+margin-bottom: 36px;
+font-style: italic;
+}
+.cover-meta {
+display: flex;
+gap: 24px;
+flex-wrap: wrap;
+}
+.cover-meta span {
+font-size: 11px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(–fog);
+font-weight: 600;
+}
+
+/* ── LAYOUT ── */
+.container {
+max-width: 860px;
+margin: 0 auto;
+padding: 0 32px;
+}
+
+/* ── INTRO PANEL ── */
+.intro-panel {
+background: var(–slate);
+color: var(–paper);
+padding: 40px 48px;
+border-left: 5px solid var(–gold);
+margin: 0;
+}
+.intro-panel p {
+font-size: 1.05rem;
+line-height: 1.8;
+font-weight: 300;
+}
+.intro-panel strong { color: var(–amber); font-weight: 600; }
+
+/* ── SECTION WRAPPERS ── */
+.section {
+padding: 52px 0 36px;
+border-bottom: 1px solid var(–divider);
+}
+.section:last-of-type { border-bottom: none; }
+
+.section-number {
+font-size: 10px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–fog);
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+.section h2 {
+font-family: ‘Playfair Display’, Georgia, serif;
+font-size: 1.75rem;
+font-weight: 700;
+color: var(–navy);
+margin-bottom: 6px;
+line-height: 1.2;
+}
+
+.section-tagline {
+font-size: 0.9rem;
+color: var(–steel);
+font-style: italic;
+margin-bottom: 28px;
+padding-bottom: 20px;
+border-bottom: 1px solid var(–divider);
+}
+
+/* ── SUBSECTIONS ── */
+.sub {
+margin-bottom: 28px;
+}
+.sub h3 {
+font-size: 0.75rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-weight: 600;
+color: var(–gold);
+margin-bottom: 12px;
+padding-bottom: 6px;
+border-bottom: 1px solid var(–divider);
+}
+
+/* ── CHECK LIST ── */
+ul.checklist {
+list-style: none;
+padding: 0;
+}
+ul.checklist li {
+position: relative;
+padding: 7px 0 7px 28px;
+font-size: 0.97rem;
+border-bottom: 1px solid rgba(0,0,0,.04);
+color: var(–ink);
+}
+ul.checklist li::before {
+content: ‘✓’;
+position: absolute;
+left: 0;
+top: 7px;
+color: var(–sage);
+font-size: 0.85rem;
+font-weight: 600;
+}
+ul.checklist li strong { color: var(–navy); }
+ul.checklist li em { color: var(–steel); font-style: italic; }
+
+/* numbered list variant */
+ol.steps {
+list-style: none;
+counter-reset: steps;
+padding: 0;
+}
+ol.steps li {
+counter-increment: steps;
+position: relative;
+padding: 10px 0 10px 44px;
+border-bottom: 1px solid rgba(0,0,0,.05);
+font-size: 0.97rem;
+}
+ol.steps li::before {
+content: counter(steps);
+position: absolute;
+left: 0; top: 10px;
+width: 26px; height: 26px;
+background: var(–navy);
+color: var(–amber);
+font-size: 0.75rem;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 3px;
+}
+
+/* ── HIGHLIGHT BOXES ── */
+.box {
+border-radius: 4px;
+padding: 22px 26px;
+margin: 20px 0;
+font-size: 0.95rem;
+}
+.box-gold {
+background: #fdf6e3;
+border-left: 4px solid var(–gold);
+}
+.box-sage {
+background: #edf5f0;
+border-left: 4px solid var(–sage);
+}
+.box-navy {
+background: var(–navy);
+color: var(–paper);
+border-left: 4px solid var(–amber);
+}
+.box-navy strong { color: var(–amber); }
+.box-rust {
+background: #fdf0eb;
+border-left: 4px solid var(–rust);
+}
+.box h4 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1rem;
+font-weight: 700;
+margin-bottom: 10px;
+color: inherit;
+}
+.box-navy h4 { color: var(–amber); }
+
+/* ── TECHNIQUE CARDS ── */
+.technique-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 16px;
+margin-top: 16px;
+}
+.technique-card {
+background: var(–paper);
+border: 1px solid var(–divider);
+border-top: 3px solid var(–gold);
+padding: 18px 20px;
+border-radius: 2px;
+}
+.technique-card h4 {
+font-size: 0.85rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+color: var(–navy);
+margin-bottom: 8px;
+}
+.technique-card p {
+font-size: 0.88rem;
+color: var(–steel);
+line-height: 1.6;
+}
+
+/* ── SCENARIO TABLE ── */
+.scenario {
+background: var(–paper);
+border: 1px solid var(–divider);
+border-radius: 3px;
+overflow: hidden;
+margin-bottom: 14px;
+}
+.scenario-header {
+background: var(–slate);
+color: var(–paper);
+padding: 10px 18px;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.scenario-header .icon {
+background: var(–amber);
+color: var(–navy);
+width: 22px; height: 22px;
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 0.7rem;
+font-weight: 900;
+flex-shrink: 0;
+}
+.scenario-body {
+padding: 14px 18px;
+font-size: 0.92rem;
+color: var(–ink);
+}
+.scenario-body strong {
+color: var(–sage);
+display: block;
+font-size: 0.8rem;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 4px;
+margin-top: 10px;
+}
+.scenario-body strong:first-child { margin-top: 0; }
+
+/* ── AFFIRMATIONS ── */
+.affirmation {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.15rem;
+font-style: italic;
+color: var(–navy);
+padding: 14px 24px;
+border-left: 3px solid var(–gold);
+margin: 10px 0;
+background: rgba(201,168,76,.06);
+}
+
+/* ── FINAL BOXES ── */
+.final-trio {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+.final-card {
+padding: 28px 24px;
+text-align: center;
+border-radius: 4px;
+}
+.final-card.fc-navy { background: var(–navy); color: var(–paper); }
+.final-card.fc-gold { background: var(–gold); color: var(–navy); }
+.final-card.fc-sage { background: var(–sage); color: var(–paper); }
+.final-card h3 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.05rem;
+font-weight: 700;
+margin-bottom: 12px;
+}
+.final-card p { font-size: 0.88rem; line-height: 1.7; opacity: .9; }
+
+/* ── FOOTER ── */
+footer {
+background: var(–navy);
+color: var(–fog);
+text-align: center;
+padding: 30px 32px;
+font-size: 0.8rem;
+letter-spacing: 0.5px;
+margin-top: 60px;
+}
+
+/* ── PRINT ── */
+@media print {
+.cover { break-after: page; }
+.section { break-inside: avoid; }
+}
+
+/* ── TABLET (max 768px) ── */
+@media (max-width: 768px) {
+.cover { padding: 48px 28px 44px; }
+.cover h1 { font-size: 2.1rem; }
+.cover .subtitle { font-size: 0.95rem; }
+.intro-panel { padding: 32px 28px; }
+.container { padding: 0 24px; }
+.section { padding: 40px 0 28px; }
+.section h2 { font-size: 1.5rem; }
+.technique-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.final-trio { grid-template-columns: 1fr; gap: 14px; }
+.affirmation { font-size: 1.05rem; padding: 12px 18px; }
+.box { padding: 18px 20px; }
+}
+
+/* ── MOBILE (max 540px) ── */
+@media (max-width: 540px) {
+body { font-size: 15px; }
+
+```
+/* Cover */
+.cover { padding: 36px 20px 36px; }
+.cover::before { width: 220px; height: 220px; top: -50px; right: -50px; border-width: 40px; }
+.cover::after { width: 140px; height: 140px; bottom: -40px; left: 20px; border-width: 28px; }
+.cover-badge { font-size: 9px; letter-spacing: 1.5px; padding: 4px 10px; margin-bottom: 20px; }
+.cover h1 { font-size: 1.85rem; margin-bottom: 14px; }
+.cover .subtitle { font-size: 0.9rem; margin-bottom: 24px; }
+.cover-meta { gap: 10px 16px; }
+.cover-meta span { font-size: 10px; letter-spacing: 1px; }
+
+/* Intro */
+.intro-panel { padding: 24px 20px; border-left-width: 4px; }
+.intro-panel p { font-size: 0.97rem; line-height: 1.75; }
+
+/* Container */
+.container { padding: 0 18px; }
+
+/* Sections */
+.section { padding: 32px 0 22px; }
+.section-number { font-size: 9px; letter-spacing: 2px; }
+.section h2 { font-size: 1.35rem; }
+.section-tagline { font-size: 0.85rem; margin-bottom: 20px; padding-bottom: 16px; }
+.sub { margin-bottom: 22px; }
+.sub h3 { font-size: 0.72rem; letter-spacing: 1.5px; margin-bottom: 10px; }
+
+/* Checklist */
+ul.checklist li { padding: 8px 0 8px 26px; font-size: 0.93rem; }
+ul.checklist li::before { font-size: 0.8rem; }
+
+/* Steps */
+ol.steps li { padding: 10px 0 10px 40px; font-size: 0.93rem; }
+ol.steps li::before { width: 24px; height: 24px; font-size: 0.7rem; }
+
+/* Boxes */
+.box { padding: 16px 18px; font-size: 0.9rem; margin: 16px 0; }
+.box h4 { font-size: 0.95rem; }
+
+/* Technique cards — full width stack */
+.technique-grid { grid-template-columns: 1fr; gap: 10px; }
+.technique-card { padding: 16px 18px; }
+.technique-card h4 { font-size: 0.83rem; }
+.technique-card p { font-size: 0.85rem; }
+
+/* Scenarios */
+.scenario { margin-bottom: 12px; }
+.scenario-header { padding: 10px 14px; font-size: 0.82rem; gap: 8px; }
+.scenario-header .icon { width: 20px; height: 20px; font-size: 0.65rem; }
+.scenario-body { padding: 12px 14px; font-size: 0.88rem; }
+.scenario-body strong { font-size: 0.75rem; }
+
+/* Affirmations */
+.affirmation { font-size: 1rem; padding: 12px 16px; margin: 8px 0; border-left-width: 3px; }
+
+/* Final cards */
+.final-trio { grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+.final-card { padding: 22px 20px; text-align: left; }
+.final-card h3 { font-size: 1rem; margin-bottom: 10px; }
+.final-card p { font-size: 0.86rem; }
+
+/* Footer */
+footer { padding: 24px 18px; font-size: 0.75rem; line-height: 1.8; }
+```
+
+}
+
+/* ── VERY SMALL (max 360px) ── */
+@media (max-width: 360px) {
+.cover h1 { font-size: 1.6rem; }
+.container { padding: 0 14px; }
+.section h2 { font-size: 1.2rem; }
+.affirmation { font-size: 0.93rem; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- COVER -->
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-badge">DVSA-Standard Learner Support Guide</div>
+    <h1>Driving Test Day<br><span>Nerves & Composure</span><br>Checklist</h1>
+    <p class="subtitle">A practical guide for staying calm, recovering from mistakes, and driving safely under pressure — from first-time candidates to repeat tests.</p>
+    <div class="cover-meta">
+      <span>UK Practical Test</span>
+      <span>All Learner Types</span>
+      <span>DVSA Standards</span>
+      <span>Print-Friendly</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO PANEL -->
+
+<div class="intro-panel">
+  <div class="container">
+    <p>
+      Most learners who fail their test don't fail because they can't drive.<br>
+      They fail because <strong>nerves make them drive differently</strong> to how they do with their instructor.<br><br>
+      This checklist doesn't just tell you what to bring. It prepares you <strong>mentally and physically</strong> to stay composed, recover cleanly from mistakes, and give the examiner an accurate picture of how you actually drive. Read it the night before. Read it again in the morning.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 1 — NIGHT BEFORE
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 01</div>
+  <h2>The Night Before the Test</h2>
+  <p class="section-tagline">What you do tonight will directly affect how your brain performs tomorrow.</p>
+
+  <div class="sub">
+    <h3>Sleep</h3>
+    <ul class="checklist">
+      <li>Aim for <strong>7–8 hours.</strong> Even 6 solid hours is enough — don't lie awake worrying about sleeping.</li>
+      <li>Set <strong>two alarms</strong> so you're not anxious about oversleeping. Then stop thinking about the morning.</li>
+      <li>If you can't sleep, that's completely normal. <em>Rest counts.</em> Lying still and calm is almost as good as sleep for mental performance.</li>
+      <li>Avoid watching test-related YouTube videos after 9pm. Your brain needs to wind down, not rehearse.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Food, Caffeine & Alcohol</h3>
+    <ul class="checklist">
+      <li><strong>No alcohol the night before</strong> — even one drink impairs reaction time, sleep quality, and confidence the next morning.</li>
+      <li>Reduce caffeine after 3pm. Tea and coffee raise cortisol (your stress hormone) — exactly what you don't need.</li>
+      <li>Eat a <strong>normal evening meal.</strong> Don't skip food to "feel light" — low blood sugar wrecks concentration.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Social Media & Conversations</h3>
+    <ul class="checklist">
+      <li><strong>Don't post about your test.</strong> Knowing people are watching creates unnecessary pressure.</li>
+      <li>Avoid online test forums tonight. Other people's horror stories will do nothing useful for you.</li>
+      <li>Don't engage with anyone who wants to grill you about the test, quiz your theory, or share their own bad experiences.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Preparation Routines</h3>
+    <ul class="checklist">
+      <li>Lay out your <strong>provisional licence, glasses/lenses (if needed), and confirmation letter</strong> somewhere visible.</li>
+      <li>Know what time you need to leave and plan for <strong>10–15 minutes extra.</strong> Rushing is one of the fastest routes to a bad start.</li>
+      <li>If you know the test centre area, briefly visualise driving there calmly. Don't mentally rehearse the whole test — just the drive in.</li>
+      <li>Plan your <strong>clothing</strong> tonight. Wear something comfortable that doesn't restrict movement. Loose shoes make clutch control harder — check your footwear now.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Mindset Before Sleep</h3>
+    <ul class="checklist">
+      <li>Your only job tomorrow is to <strong>drive the way you drive with your instructor.</strong> That's it.</li>
+      <li>Remind yourself: <em>You have been trained for this. You wouldn't be booked in if your instructor didn't believe you were ready.</em></li>
+      <li>Write down three things you drive well. Read them. Leave them on your phone for the morning.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 2 — MORNING OF THE TEST
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 02</div>
+  <h2>The Morning of the Test</h2>
+  <p class="section-tagline">The two hours before your test matter more than most learners realise.</p>
+
+  <div class="sub">
+    <h3>Breakfast & Hydration</h3>
+    <ul class="checklist">
+      <li><strong>Eat something,</strong> even if you feel sick with nerves. Banana, toast, porridge — something that releases energy steadily. Empty stomach = foggy brain.</li>
+      <li><strong>Drink water.</strong> Dehydration causes fatigue, poor concentration, and irritability — all before you've even started. Bring a small bottle to the test centre.</li>
+      <li>Limit yourself to <strong>one tea or coffee</strong> if you normally have it. More than that and your hands may shake and your heart will race before you've even sat in the car.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Breathing Technique — Box Breathing</h3>
+    <ul class="checklist">
+      <li>Used by military, surgeons, and athletes before high-pressure situations. Takes two minutes.</li>
+    </ul>
+    <div class="box box-gold">
+      <h4>Box Breathing — Do This on the Morning</h4>
+      <p><strong>Breathe IN</strong> through your nose for 4 counts.<br>
+      <strong>Hold</strong> for 4 counts.<br>
+      <strong>Breathe OUT</strong> slowly through your mouth for 4 counts.<br>
+      <strong>Hold</strong> for 4 counts.<br><br>
+      Repeat 4–6 times. This lowers your heart rate and cortisol levels measurably within 90 seconds.
+      It's not a cliché. It works.</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Warm-Up Lesson</h3>
+    <ul class="checklist">
+      <li>If your instructor offers a lesson before the test, <strong>take it.</strong> Even 30–40 minutes of driving gets your body into the physical rhythm of it.</li>
+      <li>The warm-up lesson is not for learning new things — it's for settling your nerves and waking up your muscle memory.</li>
+      <li>Tell your instructor how you're feeling. They've seen it all. They won't judge you.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>What to Avoid This Morning</h3>
+    <ul class="checklist">
+      <li><strong>Avoid negative people.</strong> If someone in your household is anxious or pessimistic about your test, minimise contact this morning.</li>
+      <li>Don't watch dashcam fail compilations or read failure posts online.</li>
+      <li>Avoid having long conversations about the test. The more you talk about it, the more your brain amplifies it.</li>
+      <li>Don't use your phone for anything stressful — news, social media, arguments.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Confidence Priming</h3>
+    <ul class="checklist">
+      <li>Read the three things you wrote down last night about what you drive well.</li>
+      <li>Stand in a confident posture for 60 seconds before leaving the house. This isn't pseudoscience — body language influences the hormones you produce.</li>
+      <li>Say to yourself (out loud or in your head): <em>"I drive well. I've been trained well. I'm ready."</em> Keep it simple.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 3 — WHAT TO BRING
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 03</div>
+  <h2>What to Bring to the Test</h2>
+  <p class="section-tagline">The basics matter. A missing document causes a cancelled test.</p>
+
+  <ul class="checklist">
+    <li><strong>UK Provisional Driving Licence</strong> — the physical photocard. Not a phone photo. The actual card.</li>
+    <li><strong>Glasses or contact lenses</strong> if you need them for the numberplate check. Failing the eyesight check ends the test immediately.</li>
+    <li><strong>Test appointment confirmation</strong> — email or text with the reference number. Test centre staff need this.</li>
+    <li><strong>Medication</strong> if you take any regularly. Don't skip medication on test day to "feel sharp" — that often backfires.</li>
+    <li><strong>Water</strong> — a small bottle for before the test. Dry mouth is a symptom of anxiety. Sipping water helps physically and gives you a reset moment.</li>
+    <li><strong>Appropriate footwear</strong> — flat, thin-soled shoes. No flip-flops, heels, or chunky boots. Your feet need to feel the pedals clearly.</li>
+    <li><strong>Your instructor's contact number</strong> in your phone — in case of any last-minute issue.</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 4 — HANDLING NERVES
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 04</div>
+  <h2>How to Handle Test Day Nerves</h2>
+  <p class="section-tagline">Nerves are not your enemy. How you respond to them is what matters.</p>
+
+  <div class="box box-sage">
+    <h4>Why Nerves Are Normal — And Expected</h4>
+    <p>Every experienced DVSA examiner expects candidates to be nervous. They are trained to account for it. Slight nervousness actually improves focus — it raises alertness and sharpens reaction times. What examiners watch for is whether a candidate can <strong>drive safely despite nerves</strong>, not whether they appear relaxed.</p>
+  </div>
+
+  <div class="sub">
+    <h3>Reframing Nerves</h3>
+    <ul class="checklist">
+      <li>Nerves are <strong>energy.</strong> They are your body preparing to perform. The physical feeling of anxiety and the physical feeling of excitement are almost identical. Tell yourself: <em>"I'm excited."</em></li>
+      <li>Mild nervousness makes you <strong>more careful</strong> at junctions, more deliberate with observations, more cautious under pressure. That's an asset.</li>
+      <li>The problem is not feeling nervous. The problem is <strong>believing your nerves mean you'll fail.</strong> That belief causes panic, not the nerves themselves.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Perfection Is Not Required</h3>
+    <ul class="checklist">
+      <li>You can make up to <strong>15 minor (driving) faults</strong> and still pass.</li>
+      <li>Most people who pass have made <strong>multiple minor faults</strong> they weren't even aware of.</li>
+      <li>One mistake is not failure. Two mistakes are not failure. The test is 40 minutes of cumulative decision-making — it is designed to accommodate human imperfection.</li>
+      <li>Serious faults matter. But a slightly wide turn, a late mirror check, or a hesitant junction approach will not end your test.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>What Panic Actually Does</h3>
+    <ul class="checklist">
+      <li>Panic causes <strong>tunnel vision</strong> — you stop scanning properly and focus only on what's immediately in front.</li>
+      <li>Panic causes <strong>shallow breathing</strong>, which reduces oxygen to the brain and makes thinking slower and clumsier.</li>
+      <li>Panic causes <strong>catastrophic thinking</strong> — one small mistake gets magnified into certainty of failure, which then causes more mistakes.</li>
+      <li>The goal is not to eliminate panic entirely — it's to notice it and interrupt it before it cascades.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 5 — EMERGENCY RESET TECHNIQUES
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 05</div>
+  <h2>Emergency Reset Techniques During the Test</h2>
+  <p class="section-tagline">These are real tools. Practice them before the test so they're automatic.</p>
+
+  <div class="technique-grid">
+    <div class="technique-card">
+      <h4>The Red Light Reset</h4>
+      <p>At every red light or long queue: exhale fully, drop your shoulders, loosen your grip on the wheel. Use these 10–30 seconds to reset your body. This stops tension building incrementally over the route.</p>
+    </div>
+    <div class="technique-card">
+      <h4>After a Stall</h4>
+      <p>Breathe out. Apply handbrake. Restart calmly. Check mirrors and proceed. That's it. Don't comment on it. Don't apologise. Don't replay it. One stall is very rarely a serious fault — how you handle the aftermath is what the examiner will note.</p>
+    </div>
+    <div class="technique-card">
+      <h4>After a Wrong Turn</h4>
+      <p>Follow the satnav or examiner's correction calmly. There is <strong>no fault</strong> for taking a wrong turn if you handle it safely. Slow down if needed. Signal correctly. Don't rush to correct. Drive the situation, not your embarrassment.</p>
+    </div>
+    <div class="technique-card">
+      <h4>After Hesitation at a Junction</h4>
+      <p>Acknowledge it internally ("I was cautious — that's safe"). Move on immediately. Don't dwell on whether it looked bad. Examiners often prefer a candidate who waits for a clear gap over one who pushes into traffic nervously.</p>
+    </div>
+    <div class="technique-card">
+      <h4>When the Examiner Goes Silent</h4>
+      <p>Silence means nothing. Examiners do not commentate while they assess. Their face tells you almost nothing about how you're doing. Silence is neutral. Focus on the road, not on reading them.</p>
+    </div>
+    <div class="technique-card">
+      <h4>Racing Thoughts Interrupt</h4>
+      <p>If your thoughts start spiralling: focus hard on one specific thing — the road ahead, the mirrors, your speed, the upcoming junction. Anchor to the physical task. "What's my speed? What's in my mirrors?" pulls your attention out of your head and back into the car.</p>
+    </div>
+    <div class="technique-card">
+      <h4>Breathing Mid-Drive</h4>
+      <p>Take a slow, deliberate exhale whenever you're stationary. Don't wait until you feel panicked — build it in proactively. Exhaling activates the parasympathetic nervous system (your body's calm state) within seconds.</p>
+    </div>
+    <div class="technique-card">
+      <h4>Mirror-Trigger Composure</h4>
+      <p>Use every mirror check as a micro-reset. Each time you check centre mirror → left mirror → right mirror, you're scanning widely and breaking the tunnel-vision cycle. Making it a smooth, deliberate habit also signals confidence to the examiner.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 6 — AFTER MAKING A MISTAKE
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 06</div>
+  <h2>What to Do After Making a Mistake</h2>
+  <p class="section-tagline">Many learners fail the test they were passing — by reacting badly to a single fault.</p>
+
+  <div class="box box-rust">
+    <h4>The Most Common Reason People Fail Despite Good Driving</h4>
+    <p>A candidate makes one minor mistake. They immediately assume they've failed. Their attention shifts to processing that assumption rather than the road. They stop checking mirrors properly. They hesitate at the next junction. They miss a gear change. They clip a kerb on a manoeuvre. Each new fault is not from poor driving — it's from panic created by misinterpreting the first fault. <strong>The original mistake was minor. The cascade of faults that followed caused the failure.</strong></p>
+  </div>
+
+  <div class="sub">
+    <h3>The Mental "Park It" Technique</h3>
+    <ul class="checklist">
+      <li>The moment you make a mistake, say to yourself: <em>"Parked."</em></li>
+      <li>That means: you've acknowledged it, you're not pretending it didn't happen, and you are now <strong>done with it.</strong></li>
+      <li>The mistake is in the past. The road ahead is not. Your job is the road ahead.</li>
+      <li>Each moment of driving is independent from the last. A good decision made 5 seconds after a bad one is still a good decision.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>The "Snowball" Effect — And How to Stop It</h3>
+    <ul class="checklist">
+      <li>Errors compound when your attention is split between driving and self-criticism. Keep 100% of your focus on the road.</li>
+      <li>If you catch yourself thinking <em>"I've failed, I've failed"</em> — interrupt it with <em>"I don't know that. Drive."</em></li>
+      <li>You have been in the car for 40 minutes thousands of times. You know how to do this. Let your training drive.</li>
+    </ul>
+  </div>
+
+  <div class="box box-gold">
+    <h4>Real Data on Faults</h4>
+    <p>The majority of candidates who pass their driving test have between 3–10 minor faults recorded. It is extremely rare for anyone to pass with zero. The examiner is not looking for perfection. They are looking for someone who can <strong>drive safely and manage hazards appropriately</strong>. That is a different standard than perfect.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 7 — EXAMINER INSIGHT
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 07</div>
+  <h2>Examiner Insight</h2>
+  <p class="section-tagline">What examiners actually think — not what you imagine they think.</p>
+
+  <div class="sub">
+    <h3>What Examiners Actually Look For</h3>
+    <ul class="checklist">
+      <li><strong>Consistent safe driving.</strong> Not precision. Not showmanship. Not textbook-perfect clutch control. Safe, appropriate decisions over a sustained period.</li>
+      <li><strong>Hazard awareness and response.</strong> Do you see things developing ahead? Do you react appropriately? Do you give way when required?</li>
+      <li><strong>Observation quality.</strong> Are you actually checking mirrors and junctions properly — or just turning your head mechanically?</li>
+      <li><strong>Appropriate speed management.</strong> Not necessarily slow — appropriate for the conditions and road type.</li>
+      <li><strong>Controlled, deliberate manoeuvres.</strong> Slow and accurate is far better than fast and panicked.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>What Examiners Ignore</h3>
+    <ul class="checklist">
+      <li>Whether you look confident or nervous.</li>
+      <li>Whether you speak to them or stay silent during the drive.</li>
+      <li>Whether you take a wrong turn (as long as it's handled safely).</li>
+      <li>Exactly which gear you're in — provided the car is controlled.</li>
+      <li>Minor hesitations when you've correctly assessed a junction as unclear.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Common Myths About Examiners</h3>
+    <ul class="checklist">
+      <li><em>"Examiners have quotas — they have to fail a certain number."</em> <strong>False.</strong> There is no DVSA quota system. Examiners fail the people who drive unsafely and pass the people who don't. It's genuinely that straightforward.</li>
+      <li><em>"If the examiner is writing a lot, I've failed."</em> <strong>False.</strong> Examiners write throughout the test. They may be recording minor faults, noting observations, or logging route data. Writing does not mean failure.</li>
+      <li><em>"Examiners try to distract you or trick you."</em> <strong>False.</strong> Examiners follow a standardised route and give standardised instructions. Their job is to assess what they see, not to manufacture failures.</li>
+      <li><em>"If you take too long at a junction, they'll fail you."</em> <strong>False.</strong> Appropriate caution at a junction where visibility is limited is correct behaviour. They would rather you wait than push into traffic.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 8 — COMMON PANIC SCENARIOS
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 08</div>
+  <h2>Common Panic Scenarios — And What to Do</h2>
+  <p class="section-tagline">Most test panic is predictable. If you've rehearsed the response, it becomes manageable.</p>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Stalling the Car</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> The most catastrophic possible thing. Immediate shame and certainty of failure.
+      <strong>Reality:</strong> One stall is almost always a minor fault — only. It becomes serious if you fail to restart safely or create a hazard.
+      <strong>Do this:</strong> Handbrake on. Restart. Check mirrors. Move off. No comment. No apology. Don't look at the examiner.
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Forgetting Mirrors</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> You changed lanes and completely forgot to check. Disaster.
+      <strong>Reality:</strong> One missed mirror check is a minor fault. It only becomes serious if combined with a dangerous action.
+      <strong>Do this:</strong> Say nothing. Immediately return to your full mirror routine: centre, left, right. Anchor yourself back to the routine and carry on.
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Missing a Gear or Crunching</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> Embarrassingly obvious. A sign you're falling apart.
+      <strong>Reality:</strong> Gear selection errors are among the most common minor faults. A crunch is unpleasant — it is not an automatic failure.
+      <strong>Do this:</strong> Select the correct gear calmly. Continue. If it happens at a junction, just correct it and proceed. One gear error will almost never fail you.
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Taking a Wrong Exit or Wrong Direction</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> You've just failed and wasted everyone's time.
+      <strong>Reality:</strong> There are no faults for taking a wrong direction. None. Zero. The examiner notes any faults in how you handle it, not the wrong turn itself.
+      <strong>Do this:</strong> Follow the satnav or the examiner's correction. Drive calmly. Signal correctly. Don't rush to recover. If it required a legal u-turn or turning around, execute it carefully.
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Blank Mind During a Manoeuvre</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> Complete shutdown. You've forgotten everything your instructor told you.
+      <strong>Reality:</strong> Your body remembers what your brain is temporarily blocking. You have done this manoeuvre dozens of times.
+      <strong>Do this:</strong> Slow down. Stop if needed. Take a breath. Say to yourself: "First step is..." and just start the first physical action. The rest tends to follow. Examiners allow reasonable time for manoeuvres.
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Examiner Writing Notes or Appearing Displeased</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> They're documenting your failure in real time.
+      <strong>Reality:</strong> They write throughout every test. A neutral expression is their professional default. It tells you nothing.
+      <strong>Do this:</strong> Stop watching them. Eyes on the road. Focus forward. Their expression is not data you can interpret reliably — your driving is.
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header"><div class="icon">!</div> Traffic Pressure from Other Drivers</div>
+    <div class="scenario-body">
+      <strong>What feels like:</strong> The car behind you is aggressively close. You feel pressured to speed up or rush a junction.
+      <strong>Reality:</strong> The examiner is aware of other road users. They will not penalise you for being cautious. They will penalise you for responding to pressure from other drivers in a way that compromises safety.
+      <strong>Do this:</strong> Ignore the pressure. Drive your test. If another driver flashes or beeps, that is their issue — not yours. Your examiner sees everything.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 9 — MINDSET SCRIPTS
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 09</div>
+  <h2>Confidence & Mindset Scripts</h2>
+  <p class="section-tagline">Keep these short. The brain responds to repetition, not length.</p>
+
+  <div class="sub">
+    <h3>Pre-Test Affirmations — Read These Slowly</h3>
+    <div class="affirmation">"I drive this way every time I'm in a car. Today is no different."</div>
+    <div class="affirmation">"My instructor wouldn't have booked me in if I wasn't ready."</div>
+    <div class="affirmation">"A mistake doesn't end my test. Only I can end my test by panicking."</div>
+    <div class="affirmation">"I am allowed to be nervous. Nerves mean I care. They are not going to stop me."</div>
+    <div class="affirmation">"The examiner is not looking for perfect. They're looking for safe."</div>
+  </div>
+
+  <div class="sub">
+    <h3>Recovery Statements — Use After a Mistake</h3>
+    <div class="affirmation">"Parked. Move on."</div>
+    <div class="affirmation">"That moment is gone. This moment is what matters."</div>
+    <div class="affirmation">"I don't know if that was a fault. Drive."</div>
+    <div class="affirmation">"One mistake is not failure. Keep going."</div>
+  </div>
+
+  <div class="sub">
+    <h3>Grounding Statements — When You Feel Overwhelmed</h3>
+    <div class="affirmation">"What's my speed right now?"</div>
+    <div class="affirmation">"When did I last check my mirrors?"</div>
+    <div class="affirmation">"What's the road ahead showing me?"</div>
+  </div>
+
+  <div class="box box-navy">
+    <h4>On Self-Talk During the Drive</h4>
+    <p>Internal self-talk has a direct effect on performance. Negative self-talk (<em>"I'm going to fail, I'm such an idiot"</em>) uses the same mental resources you need for driving. It is not self-awareness. It is self-sabotage. If you catch yourself doing it: switch. Ask yourself a practical question about your driving. That redirect takes two seconds and works.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 10 — FINAL 5-MINUTE PRE-TEST ROUTINE
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Section 10</div>
+  <h2>Final 5-Minute Pre-Test Routine</h2>
+  <p class="section-tagline">Do this immediately before the examiner calls your name.</p>
+
+  <ol class="steps">
+    <li><strong>Step away from other candidates.</strong> Find a quiet spot — outside if possible. You don't need to absorb other people's anxiety right now.</li>
+    <li><strong>Drink some water.</strong> Small sips. Hydrated brain, settled nerves.</li>
+    <li><strong>Do one full round of box breathing.</strong> In 4 — Hold 4 — Out 4 — Hold 4. Do it twice. Minimum.</li>
+    <li><strong>Drop and roll your shoulders back.</strong> Most nervous candidates hold tension in their shoulders and upper back. Release it now, not while driving.</li>
+    <li><strong>Read your three strengths.</strong> The things you wrote down last night. Read them again.</li>
+    <li><strong>Say one recovery statement out loud or in your head.</strong> "Parked. Move on." or "One moment at a time."</li>
+    <li><strong>Put your phone on silent and in your bag.</strong> You don't need it for the next 45 minutes.</li>
+    <li><strong>When your name is called: walk calmly, breathe steadily, smile if it comes naturally.</strong> You are ready.</li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     FINAL THREE SECTIONS
+══════════════════════════════════════════════════ -->
+
+<div class="section">
+  <div class="section-number">Final Notes</div>
+  <h2>What To Remember, What Examiners Respect, Why You Can Still Pass</h2>
+  <p class="section-tagline">Three things worth carrying with you into that car.</p>
+
+  <div class="final-trio">
+    <div class="final-card fc-navy">
+      <h3>What To Remember If Things Go Wrong</h3>
+      <p>You don't know what is and isn't a fault while the test is happening. Neither does your brain, under pressure. The only thing you can control is what you do next. One bad moment does not erase everything before it. Keep driving. Keep observing. Keep making good decisions. That is your only job.</p>
+    </div>
+    <div class="final-card fc-gold">
+      <h3>What Examiners Respect Most</h3>
+      <p>Candidates who make a mistake and continue to drive safely. Candidates who hesitate at a genuine hazard rather than pushing through. Candidates who handle pressure calmly, even if imperfectly. They don't respect perfection. They respect safe decision-making and the ability to manage the real conditions of real roads.</p>
+    </div>
+    <div class="final-card fc-sage">
+      <h3>Why You Can Still Pass</h3>
+      <p>Because the pass mark is not perfect. Because nerves do not prevent passing. Because most people who sit in that examiner's seat also felt exactly as you feel right now — and passed. Because your instructor believed in you enough to book this test. Because safe driving is something you can already do.</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer>
+  DVSA Learner Support — Test Day Nerves & Composure Checklist &nbsp;|&nbsp; UK Practical Driving Test &nbsp;|&nbsp; Print and keep for test day
+</footer>
+
+</body>
+</html>
 
